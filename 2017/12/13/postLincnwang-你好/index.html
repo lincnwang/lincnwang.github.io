@@ -5,14 +5,36 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #4F4F4F; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #4F4F4F, 0 0 5px     #4F4F4F; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #4F4F4F;    /*上边框颜色*/
+        border-left-color: #4F4F4F;    /*左边框颜色*/
+    }
+</style>
 <meta name="theme-color" content="#222">
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -56,10 +78,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.ico?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.ico?v=5.1.3">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
@@ -79,18 +101,18 @@
 
 
 
-<meta name="description" content="摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。关键词: 带通采样; 数据采集; ADC08">
+<meta name="description" content="摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。">
 <meta name="keywords" content="hardware">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于带通采样定理的高速数据采集系统的硬件电路设计">
 <meta property="og:url" content="http://yoursite.com/2017/12/13/postLincnwang-你好/index.html">
 <meta property="og:site_name" content="LincnWang">
-<meta property="og:description" content="摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。关键词: 带通采样; 数据采集; ADC08">
+<meta property="og:description" content="摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-13T13:05:19.514Z">
+<meta property="og:updated_time" content="2017-12-14T09:52:06.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于带通采样定理的高速数据采集系统的硬件电路设计">
-<meta name="twitter:description" content="摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。关键词: 带通采样; 数据采集; ADC08">
+<meta name="twitter:description" content="摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。">
 
 
 
@@ -98,7 +120,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.3',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -232,9 +254,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -325,6 +381,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
 
           
 
@@ -341,7 +428,7 @@
       
 
       
-        <p>摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。<br>关键词: 带通采样; 数据采集; ADC08D1000</p>
+        <p>摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。<br><a id="more"></a><br>关键词: 带通采样; 数据采集; ADC08D1000</p>
 <h2 id="Hardware-Circuit-Design-of-High-speed-Data-Acquisition-System-Based-on-Band-pass-Sampling-Theorem"><a href="#Hardware-Circuit-Design-of-High-speed-Data-Acquisition-System-Based-on-Band-pass-Sampling-Theorem" class="headerlink" title="Hardware Circuit Design of High-speed Data Acquisition System Based on Band-pass Sampling Theorem"></a>Hardware Circuit Design of High-speed Data Acquisition System Based on Band-pass Sampling Theorem</h2><p>Abstract: This paper introduced the band-pass sampling theorem. The sampling rate in data collection can be greatly reduced by this theorem. However, problems of signals aliasing, sampling blind area and spectrum reversal were appeared in actual data collection. The paper proposed the solution methods of these problems. Then the hardware circuit of the high-speed data acquisition system was designed based on the theoretical basis. The data acquisition ADC chip AD08D1000, the peripheral difference signal circuit of the chip and the clock signal circuit were introduced. Besides, the power module circuit and the USB module circuit used for data transmission were introduced.<br>Key words: band-pass sampling; data acquisition; ADC08D1000</p>
 <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>数据采集是获得信息的一种基本手段。随着信息科学技术的迅速发展，它已经成为信息领域中不可缺少的部分。随着科技的不断进步，人们对数据采集系统的要求也越来越高，不仅要求采样的精度高，数据转换速度快，还要求具有抗干扰能力。高速数据采集系统主要包括几个部分:前端调理电路，高速ADC，时钟电路，微处理器以及电源等组成。文中提出一种以NiosⅡ为核心控制器，基于带通采样的高速数据采集系统，并设计了系统中各个部分的硬件电路。</p>
 <h2 id="1-带通采样"><a href="#1-带通采样" class="headerlink" title="1 带通采样"></a>1 带通采样</h2><p>根据奈奎斯特采样定理，对于频带为(0，fh)的信号，要想采样后能够不失真的还原出原信号，则抽样频率必须大于2倍信号的最高频率，即fs≥2fh．但是实际中多数信号是频率很高的信号，对于频率为(fL，fH)的高频率信号，如果用fs≥2fh的采样频率进行采样，现在的ADC器件根本无法实现，且后续的数字信号处理器也无法处理高频率信号。这个时候我们可以通过在软件无线电中应用十分广泛的带通采样定理来采样。</p>
@@ -355,6 +442,19 @@
     
     
 
+
+      
+      <div>
+    
+        
+<div>
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------���Ľ���<i class="fa fa-paw"></i>��л�����Ķ�-------------</div>
+</div>
+
+        
+      </div>
+      
+
     
 
     
@@ -365,7 +465,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hardware/" rel="tag"># hardware</a>
+            <a href="/tags/hardware/" rel="tag"><i class="fa fa-tag"></i> hardware</a>
           
         </div>
       
@@ -404,6 +504,32 @@
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
       
     </div>
   </div>
@@ -540,14 +666,33 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">lincnwang</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
 </div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
 
 
 
@@ -601,6 +746,9 @@
 
 
 
+  
+  
+
 
 
 
@@ -637,6 +785,16 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
@@ -715,6 +873,323 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -733,6 +1208,12 @@
   
 
   
+
+  
+  <a href="https://lincnwang.github.io"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Welcome to my blog" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
 
 </body>
 </html>

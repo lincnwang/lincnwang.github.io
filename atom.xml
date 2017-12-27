@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-15T04:43:01.298Z</updated>
+  <updated>2017-12-27T13:49:54.271Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python tkinter的使用</title>
+    <link href="http://yoursite.com/2017/12/27/python-tkinter%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/12/27/python-tkinter的使用/</id>
+    <published>2017-12-27T13:40:38.000Z</published>
+    <updated>2017-12-27T13:49:54.271Z</updated>
+    
+    <content type="html"><![CDATA[<p>master = Tk()<br>master.title(“度云物联网异或校验工具”)<br>data_dir = “data”</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;master = Tk()&lt;br&gt;master.title(“度云物联网异或校验工具”)&lt;br&gt;data_dir = “data”&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="GUI设计" scheme="http://yoursite.com/categories/GUI%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="software python" scheme="http://yoursite.com/tags/software-python/"/>
+    
+  </entry>
   
   <entry>
     <title>基于带通采样定理的高速数据采集系统的硬件电路设计</title>

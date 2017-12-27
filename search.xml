@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python tkinter的使用]]></title>
+    <url>%2F2017%2F12%2F27%2Fpython-tkinter%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[master = Tk()master.title(“度云物联网异或校验工具”)data_dir = “data”]]></content>
+      <categories>
+        <category>GUI设计</category>
+      </categories>
+      <tags>
+        <tag>software python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基于带通采样定理的高速数据采集系统的硬件电路设计]]></title>
     <url>%2F2017%2F12%2F13%2FpostLincnwang-%E4%BD%A0%E5%A5%BD%2F</url>
     <content type="text"><![CDATA[摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。关键词: 带通采样; 数据采集; ADC08D1000 Hardware Circuit Design of High-speed Data Acquisition System Based on Band-pass Sampling TheoremAbstract: This paper introduced the band-pass sampling theorem. The sampling rate in data collection can be greatly reduced by this theorem. However, problems of signals aliasing, sampling blind area and spectrum reversal were appeared in actual data collection. The paper proposed the solution methods of these problems. Then the hardware circuit of the high-speed data acquisition system was designed based on the theoretical basis. The data acquisition ADC chip AD08D1000, the peripheral difference signal circuit of the chip and the clock signal circuit were introduced. Besides, the power module circuit and the USB module circuit used for data transmission were introduced.Key words: band-pass sampling; data acquisition; ADC08D1000 引言数据采集是获得信息的一种基本手段。随着信息科学技术的迅速发展，它已经成为信息领域中不可缺少的部分。随着科技的不断进步，人们对数据采集系统的要求也越来越高，不仅要求采样的精度高，数据转换速度快，还要求具有抗干扰能力。高速数据采集系统主要包括几个部分:前端调理电路，高速ADC，时钟电路，微处理器以及电源等组成。文中提出一种以NiosⅡ为核心控制器，基于带通采样的高速数据采集系统，并设计了系统中各个部分的硬件电路。 1 带通采样根据奈奎斯特采样定理，对于频带为(0，fh)的信号，要想采样后能够不失真的还原出原信号，则抽样频率必须大于2倍信号的最高频率，即fs≥2fh．但是实际中多数信号是频率很高的信号，对于频率为(fL，fH)的高频率信号，如果用fs≥2fh的采样频率进行采样，现在的ADC器件根本无法实现，且后续的数字信号处理器也无法处理高频率信号。这个时候我们可以通过在软件无线电中应用十分广泛的带通采样定理来采样。 1．1 带通采样定理理论带通采样定理:频带为(fL，fH)的带通信号，带宽B=fH－fL．如果其采样速率满足:f_x=(2(f_L+f_H))/(2n+1)=〖4f〗_0/(2n+1)式中f_0=(f_L+f_H)/2，其中n取能满足f_s=2(f_H-f_L)的整数，那么用fs进行等间隔采样得到的信号能准确的确定原信号。带通采样定理的结果把位于［nB，(n+1)B］(n=0，1，2，3……)不同频带上的信号都用位于(0，B)频带的信号来表示。所以带通采样定理所使用的前提条件是:只允许1个频带上存在信号，不允许其他不相同的频带上同时存在信号。如果其他不相同的频带上存在信号，则会引起信号混叠。这样可以采用抗混叠滤波器来解决，即在采样前先进行滤波，得到想要的带通信号，再进行采样。 1．2 带通采样中的“盲区”处理当抗混叠滤波器是理想的情况下， 通过调节滤波器的中心频率，可以采用同一采样频率f_s=2(f_H-f_L)来对整个频段的信号进行采样，这样可以实现整个频段的无“盲区”采样。但是现实中理想的滤波器是不存在的，可实现的滤波器采样的直接过后就是存在采样“盲区”，当信号落在“盲区”时， 就会被滤波器滤掉，从而无法对信号进行采样并使其数字化。解决这个采样盲区的办法是使用一个主采样频率配合多个“盲区”采样频率进行采样。根据式f_x=(2(f_L+f_H))/(2n+1)=〖4f〗_0/(2n+1)可知“盲区”采样频率:f_sm=4/(2n+1) f_om式中f_om为“盲区”采样中心频率，它与主采样频率f_s的关系为:f_om=(m+1)/2 f_s得:f_sm=(2m+2)/(2n+1) f_s式中m取不同整数对应的不同“盲区”，n的取值尽量使f_sm靠近f_s。 1．3带通采样中的频谱反转带通采样的结果是把位于［nB，(n+1)B］(n=0，1，2，3……)不同频带上的信号都用位于(0，B)频带的信号来表示。当n为偶数时，采样后信号的频谱在零频位置得以还原。但是当n为基数时，采样后信号的频谱在零频位置却发生了翻转。就n=3来说明，频谱为(3B，4B)的信号在采样频谱如图1所示。经过采样频率fs=2B采样后信号的频谱如图2所示，可以看出采样后信号频谱在零频位置(－B，B)上发生了反转，而在(－2B，0)和(0，2B)上信号频谱没有发生反转。在这段频率上信号x(t)的频域表达式为X(w±2πB)，将其进行时域变换得到:X(w±2πB)→e^(±j2πBt) x(t)＝e^(±jπf_s t) x(t)进行离散变换，得到数字化序列为:e^(±jπn) x(n)=(-1)^n x(n)从式中看出，只要将数字化序列进行隔位符号取反，就可以解决n为基数时的频谱反转问题。]]></content>

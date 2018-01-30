@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="LincnWang">
 <meta property="og:description" content="使用hexo+github搭建博客网站后，发表博客文章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-30T08:49:58.124Z">
+<meta property="og:updated_time" content="2018-01-30T08:55:05.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github write blog">
 <meta name="twitter:description" content="使用hexo+github搭建博客网站后，发表博客文章">
@@ -519,8 +519,8 @@ $ hexo new [layout] &lt;title&gt;
 </tr>
 </tbody>
 </table>
-<p>可以用publish命令将草稿移动到source/posts文件夹下<br>    $ hexo publish [layout] <title></title></p>
-<h2 id="二、写博客"><a href="#二、写博客" class="headerlink" title="二、写博客"></a>二、写博客</h2><pre><code>打开hexo/source/posts目录下的md文件，即可进行博客编写。
+<h2 id="可以用publish命令将草稿移动到source-posts文件夹下"><a href="#可以用publish命令将草稿移动到source-posts文件夹下" class="headerlink" title="可以用publish命令将草稿移动到source/posts文件夹下"></a>可以用publish命令将草稿移动到source/posts文件夹下</h2><pre><code>$ hexo publish [layout] &lt;title&gt;
+</code></pre><h2 id="二、写博客"><a href="#二、写博客" class="headerlink" title="二、写博客"></a>二、写博客</h2><pre><code>打开hexo/source/posts目录下的md文件，即可进行博客编写。
 </code></pre><h2 id="打开Markdown文件，其格式为："><a href="#打开Markdown文件，其格式为：" class="headerlink" title="打开Markdown文件，其格式为："></a>打开Markdown文件，其格式为：</h2><pre><code>title: hexo-blog  #文章标题
 date: 2018-01-30 15:51:07   #创作时间
 tags: [标签1, 标签2, 标签3]    #标签
@@ -528,8 +528,9 @@ categories: hexo github    #分类
 description: 这是一篇教你怎么发布博文的文章    #文章描述
 ---
 以下是正文
-</code></pre><p>   默认情况下，生成的博文目录会显示全部的内容，如何设置文章摘要的长度呢？<br>   答案就是在合适的位置加上<br>    <a id="more"></a></p>
-
+</code></pre><p>   默认情况下，生成的博文目录会显示全部的内容，如何设置文章摘要的长度呢？</p>
+<h2 id="答案就是在合适的位置加上"><a href="#答案就是在合适的位置加上" class="headerlink" title="   答案就是在合适的位置加上"></a>   答案就是在合适的位置加上</h2><pre><code>&lt;!--more--&gt;
+</code></pre>
       
     </div>
     
@@ -800,7 +801,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、创建博客"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x535A;&#x5BA2;" class="headerlink" title="&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x535A;&#x5BA2;"></a>&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x535A;&#x5BA2;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、写博客"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x4E8C;&#x3001;&#x5199;&#x535A;&#x5BA2;" class="headerlink" title="&#x4E8C;&#x3001;&#x5199;&#x535A;&#x5BA2;"></a>&#x4E8C;&#x3001;&#x5199;&#x535A;&#x5BA2;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开Markdown文件，其格式为："><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x6253;&#x5F00;Markdown&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;" class="headerlink" title="&#x6253;&#x5F00;Markdown&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;"></a>&#x6253;&#x5F00;Markdown&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、创建博客"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x535A;&#x5BA2;" class="headerlink" title="&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x535A;&#x5BA2;"></a>&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x535A;&#x5BA2;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以用publish命令将草稿移动到source-posts文件夹下"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x53EF;&#x4EE5;&#x7528;publish&#x547D;&#x4EE4;&#x5C06;&#x8349;&#x7A3F;&#x79FB;&#x52A8;&#x5230;source-posts&#x6587;&#x4EF6;&#x5939;&#x4E0B;" class="headerlink" title="&#x53EF;&#x4EE5;&#x7528;publish&#x547D;&#x4EE4;&#x5C06;&#x8349;&#x7A3F;&#x79FB;&#x52A8;&#x5230;source/posts&#x6587;&#x4EF6;&#x5939;&#x4E0B;"></a>&#x53EF;&#x4EE5;&#x7528;publish&#x547D;&#x4EE4;&#x5C06;&#x8349;&#x7A3F;&#x79FB;&#x52A8;&#x5230;source/posts&#x6587;&#x4EF6;&#x5939;&#x4E0B;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、写博客"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x4E8C;&#x3001;&#x5199;&#x535A;&#x5BA2;" class="headerlink" title="&#x4E8C;&#x3001;&#x5199;&#x535A;&#x5BA2;"></a>&#x4E8C;&#x3001;&#x5199;&#x535A;&#x5BA2;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开Markdown文件，其格式为："><span class="nav-number">4.</span> <span class="nav-text"><a href="#&#x6253;&#x5F00;Markdown&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;" class="headerlink" title="&#x6253;&#x5F00;Markdown&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;"></a>&#x6253;&#x5F00;Markdown&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#答案就是在合适的位置加上"><span class="nav-number">5.</span> <span class="nav-text"><a href="#&#x7B54;&#x6848;&#x5C31;&#x662F;&#x5728;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#x52A0;&#x4E0A;" class="headerlink" title="   &#x7B54;&#x6848;&#x5C31;&#x662F;&#x5728;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#x52A0;&#x4E0A;"></a>   &#x7B54;&#x6848;&#x5C31;&#x662F;&#x5728;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#x52A0;&#x4E0A;</span></a></li></ol></div>
             
 
           </div>

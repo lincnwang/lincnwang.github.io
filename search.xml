@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo+github write blog]]></title>
+    <url>%2F2018%2F01%2F30%2Fhexo-github-write-blog%2F</url>
+    <content type="text"><![CDATA[#一、创建博客 定位到我们的hexo根目录，执行命令： $ hexo new [layout] 即可新建一个博文页面。|:-:|:-:|:-:||布局（layout）|存储路径|说明||post|source/posts|默认，可以直接发布||page|source|在source下新建一个文件夹||drft|source/drafts|新建文件将保存到_drafts中|可以用publish命令将草稿移动到source/posts文件夹下 $ hexo publish [layout] #二、写博客 打开hexo/source/posts目录下的md文件，即可进行博客编写。 打开Markdown文件，其格式为：title: hexo-blog #文章标题 date: 2018-01-30 15:51:07 #创作时间 tags: [标签1, 标签2, 标签3] #标签 categories: hexo github #分类 description: 这是一篇教你怎么发布博文的文章 #文章描述 --- 以下是正文 默认情况下，生成的博文目录会显示全部的内容，如何设置文章摘要的长度呢？ 答案就是在合适的位置加上 &lt;!--more--&gt;]]></content>
+      <categories>
+        <category>hexo+github 写博客</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python tkinter的使用]]></title>
     <url>%2F2017%2F12%2F27%2Fpython-tkinter%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[master = Tk()master.title(“度云物联网异或校验工具”)data_dir = “data”]]></content>
@@ -8,7 +21,8 @@
         <category>GUI设计</category>
       </categories>
       <tags>
-        <tag>software python</tag>
+        <tag>software</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>

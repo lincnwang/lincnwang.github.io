@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-27T13:49:54.271Z</updated>
+  <updated>2018-01-30T08:35:15.654Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo+github write blog</title>
+    <link href="http://yoursite.com/2018/01/30/hexo-github-write-blog/"/>
+    <id>http://yoursite.com/2018/01/30/hexo-github-write-blog/</id>
+    <published>2018-01-30T07:51:07.000Z</published>
+    <updated>2018-01-30T08:35:15.654Z</updated>
+    
+    <content type="html"><![CDATA[<p>#一、创建博客<br>    定位到我们的hexo根目录，执行命令：<br>    $ hexo new [layout] <title><br>即可新建一个博文页面。<br>|:-:|:-:|:-:|<br>|布局（layout）|存储路径|说明|<br>|post|source/posts|默认，可以直接发布|<br>|page|source|在source下新建一个文件夹|<br>|drft|source/drafts|新建文件将保存到_drafts中|<br>可以用publish命令将草稿移动到source/posts文件夹下<br>    $ hexo publish [layout] <title></title></title></p><p>#二、写博客<br>    打开hexo/source/posts目录下的md文件，即可进行博客编写。</p><h2 id="打开Markdown文件，其格式为："><a href="#打开Markdown文件，其格式为：" class="headerlink" title="打开Markdown文件，其格式为："></a>打开Markdown文件，其格式为：</h2><pre><code>title: hexo-blog  #文章标题date: 2018-01-30 15:51:07   #创作时间tags: [标签1, 标签2, 标签3]    #标签categories: hexo github    #分类description: 这是一篇教你怎么发布博文的文章    #文章描述---以下是正文默认情况下，生成的博文目录会显示全部的内容，如何设置文章摘要的长度呢？答案就是在合适的位置加上&lt;!--more--&gt;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      使用hexo+github搭建博客网站后，发表博客文章
+    
+    </summary>
+    
+      <category term="hexo+github 写博客" scheme="http://yoursite.com/categories/hexo-github-%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python tkinter的使用</title>
     <link href="http://yoursite.com/2017/12/27/python-tkinter%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2017/12/27/python-tkinter的使用/</id>
     <published>2017-12-27T13:40:38.000Z</published>
-    <updated>2017-12-27T13:49:54.271Z</updated>
+    <updated>2017-12-27T14:08:31.314Z</updated>
     
     <content type="html"><![CDATA[<p>master = Tk()<br>master.title(“度云物联网异或校验工具”)<br>data_dir = “data”</p>]]></content>
     
@@ -38,7 +64,9 @@
       <category term="GUI设计" scheme="http://yoursite.com/categories/GUI%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="software python" scheme="http://yoursite.com/tags/software-python/"/>
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   

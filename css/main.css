@@ -745,9 +745,10 @@ pre .javascript .function {
   position: relative;
   padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #eee;
-  border-left-width: 5px;
-  border-radius: 3px;
+  border: initial;
+  border-left: 3px solid #eee;
+  background-color: #f9f9f9;
+  border-radius: 0px;
 }
 .post-body .note h2,
 .post-body .note h3,
@@ -776,6 +777,7 @@ pre .javascript .function {
   margin-bottom: 0;
 }
 .post-body .note.default {
+  background-color: #fff;
   border-left-color: #777;
 }
 .post-body .note.default h2,
@@ -786,6 +788,7 @@ pre .javascript .function {
   color: #777;
 }
 .post-body .note.primary {
+  background-color: #fff;
   border-left-color: #6f42c1;
 }
 .post-body .note.primary h2,
@@ -796,6 +799,7 @@ pre .javascript .function {
   color: #6f42c1;
 }
 .post-body .note.info {
+  background-color: #fff;
   border-left-color: #428bca;
 }
 .post-body .note.info h2,
@@ -806,6 +810,7 @@ pre .javascript .function {
   color: #428bca;
 }
 .post-body .note.success {
+  background-color: #fff;
   border-left-color: #5cb85c;
 }
 .post-body .note.success h2,
@@ -816,6 +821,7 @@ pre .javascript .function {
   color: #5cb85c;
 }
 .post-body .note.warning {
+  background-color: #fffefb;
   border-left-color: #f0ad4e;
 }
 .post-body .note.warning h2,
@@ -826,6 +832,7 @@ pre .javascript .function {
   color: #f0ad4e;
 }
 .post-body .note.danger {
+  background-color: #fff;
   border-left-color: #d9534f;
 }
 .post-body .note.danger h2,
@@ -841,22 +848,22 @@ pre .javascript .function {
   white-space: nowrap;
 }
 .post-body .label.default {
-  background-color: #f0f0f0;
+  background-color: #fefefe;
 }
 .post-body .label.primary {
-  background-color: #efe6f7;
+  background-color: #fbf9fd;
 }
 .post-body .label.info {
-  background-color: #e5f2f8;
+  background-color: #f7fbfd;
 }
 .post-body .label.success {
-  background-color: #e7f4e9;
+  background-color: #f7fbf8;
 }
 .post-body .label.warning {
-  background-color: #fcf6e1;
+  background-color: #fefbf3;
 }
 .post-body .label.danger {
-  background-color: #fae8eb;
+  background-color: #fefafa;
 }
 .post-body .tabs {
   position: relative;
@@ -1961,7 +1968,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9858ff;
+  background: #39eb2d;
 }
 .links-of-blogroll {
   font-size: 13px;

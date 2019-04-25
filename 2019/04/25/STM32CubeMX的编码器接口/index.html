@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="STM32,编码器,CubeMX," />
 
 
 
@@ -113,13 +113,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="LincnWang">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="使用STM32CubeMX配置STM32的编码器接口，可直接通过读寄存器获取编码器值。">
+<meta name="keywords" content="STM32,编码器,CubeMX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STM32CubeMX的编码器接口">
+<meta property="og:url" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/index.html">
 <meta property="og:site_name" content="LincnWang">
+<meta property="og:description" content="使用STM32CubeMX配置STM32的编码器接口，可直接通过读寄存器获取编码器值。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/6.png">
+<meta property="og:updated_time" content="2019-04-25T14:02:15.127Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LincnWang">
+<meta name="twitter:title" content="STM32CubeMX的编码器接口">
+<meta name="twitter:description" content="使用STM32CubeMX配置STM32的编码器接口，可直接通过读寄存器获取编码器值。">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/1.png">
 
 
 
@@ -149,13 +161,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/"/>
 
 
 
 
 
-  <title>归档 | LincnWang</title>
+  <title>STM32CubeMX的编码器接口 | LincnWang</title>
   
 
 
@@ -174,7 +186,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -322,417 +334,293 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lincnwang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LincnWang">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">STM32CubeMX的编码器接口</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T20:48:34+08:00">
+                2019-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hardware/" itemprop="url" rel="index">
+                    <span itemprop="name">hardware</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/25/STM32CubeMX的编码器接口/" itemprop="url">
-              
-                <span itemprop="name">STM32CubeMX的编码器接口</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-25T20:48:34+08:00"
-              content="2019-04-25" >
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/25/中兴众星捧月算法大赛/" itemprop="url">
-              
-                <span itemprop="name">中兴众星捧月算法大赛</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-25T14:23:51+08:00"
-              content="2019-04-25" >
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/25/博客恢复/" itemprop="url">
-              
-                <span itemprop="name">博客恢复</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-25T12:10:21+08:00"
-              content="2019-04-25" >
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/08/delete-blog/" itemprop="url">
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
               
-                <span itemprop="name">delete blog</span>
+                <a href="/2019/04/25/STM32CubeMX的编码器接口/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/04/25/STM32CubeMX的编码器接口/" itemprop="commentsCount"></span>
+                </a>
               
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-08T22:19:18+08:00"
-              content="2018-02-08" >
-          02-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/06/Altiumdesigner-shortcuts/" itemprop="url">
-              
-                <span itemprop="name">Altiumdesigner-shortcuts</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-06T21:00:48+08:00"
-              content="2018-02-06" >
-          02-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/31/pyinstall的使用/" itemprop="url">
-              
-                <span itemprop="name">pyinstall的使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-31T17:30:57+08:00"
-              content="2018-01-31" >
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/30/hexo-github-write-blog/" itemprop="url">
-              
-                <span itemprop="name">hexo+github write blog</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-30T15:51:07+08:00"
-              content="2018-01-30" >
-          01-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
+            
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/27/python-tkinter的使用/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">python tkinter的使用</span>
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,028
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T21:40:38+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
 
+          
+              <div class="post-description">
+                  使用STM32CubeMX配置STM32的编码器接口，可直接通过读寄存器获取编码器值。
+              </div>
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/13/postLincnwang-你好/" itemprop="url">
-              
-                <span itemprop="name">基于带通采样定理的高速数据采集系统的硬件电路设计</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-13T16:15:33+08:00"
-              content="2017-12-13" >
-          12-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/13/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-13T15:29:52+08:00"
-              content="2017-12-13" >
-          12-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>编码器是将位移或者角度转换为电信号的仪器，按照读出方式编码器可以分为接触式和非接触式两种；按照工作原理可分为增量式和绝对式两种。增量式编码器是将位移转换成周期性的电信号，再把这个电信号转变为计数脉冲，用脉冲的个数表示位移的大小。绝对式编码器的每一个位置对应一个确定的数字码，因此它的示值只与测量的起始和终止位置有关，而与测量的中间过程无关。<br>由于绝对式编码器是直接去读位置，所以其位置信息是通过通讯的方式进行读取，相对增量式编码器使用更加简单（通常价格也更加昂贵，且通常情况下量程较短，类似于光栅尺的低阶版）。所以在使用中我们更多的关注点在如何精确读取增量式编码器的值。<br>首先我们应该知道，一般增量式编码器的输出有集电极开路输出，推拉输出以及线驱动输出。输出信号类型目前一般都是正交信号AB相输出加上参考零位信号Z相输出的方式。当然也有更少的只有A相或者AB相输出和更多的A，\overline{A}，B，\overline{B}，Z，\overline{Z}输出，A，\overline{A}为互补的一组信号。其中A、B为相差90°的脉冲，Z相信号在编码器旋转一周发出一个脉冲信号，通常用作参考零位。通常我们通过判定AB相信号的前后位置来判定编码器正转和反转。</p>
+<p><img src="/2019/04/25/STM32CubeMX的编码器接口/1.png" alt="测试图片"><br><img src="/2019/04/25/STM32CubeMX的编码器接口/2.png" alt="测试图片"></p>
+<p>了解了增量式编码器的工作原理，接下来我们看看应该如何是该它。STM32给我们预留了该增量式编码器的硬件接口。通过STM32CubeMX对gpio进行配置后，将增量式编码器的AB两相信号接到STM32的对应IO口上，当编码器工作时，STM32会硬件记录编码器的信号值，此时编码器正转或者反转，STM32会自己进行硬件加减运算，使用方便且精度高，记录也很精确。<br>这里我们使用的MCU是STM32F103RCT6，编码器为光洋电子的TRD-2T，两相+原点增量式旋转编码器</p>
+<p>STM32的编码器接口模式基本上相当于使用了一个带有方向选择的外部时钟这里我们使用TIM3。首先我们使用CubeMX配置PA6和PA7的功能为TIM3_CH1和TIM3_CH2,然后配置TIM3为编码器接口模式。</p>
+<p><img src="/2019/04/25/STM32CubeMX的编码器接口/3.png" alt="测试图片"><br><img src="/2019/04/25/STM32CubeMX的编码器接口/4.png" alt="测试图片"></p>
+<p>由于STM32的编码器接口计数方式为上升沿和下降沿都要计数，所以对于AB两相信号为方波来说其编码器的值为实际值的4倍，故PSC配置为4-1，其他的主要配置清单如图：</p>
+<p><img src="/2019/04/25/STM32CubeMX的编码器接口/5.png" alt="测试图片"></p>
+<p>同时建议使用中断方式读取处理编码器，所以我们打开TIM3的全局中断：</p>
+<p><img src="/2019/04/25/STM32CubeMX的编码器接口/6.png" alt="测试图片"></p>
+<p>以上就是CubeMX上对编码器接口的配置，接下来我们生成MDK-ARM工程，用keil打开，在main函数中使用以下函数对编码器寄存器值清零：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__HAL_TIM_SET_COUNTER(&amp;htim3,0);</span><br></pre></td></tr></table></figure></p>
+<p>然后打开定时器的encoder模式（查询或中断模式）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HAL_TIM_Encoder_Start(&amp;htim3, TIM_CHANNEL_ALL);   //打开定时器的encoder模式</span><br><span class="line">HAL_TIM_Encoder_Start_IT(&amp;htim3, TIM_CHANNEL_ALL); //打开定时器的encoder中断模式</span><br></pre></td></tr></table></figure></p>
+<p>如果使用查询模式，则直接使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoder_cnt = (uint32_t)(__HAL_TIM_GET_COUNTER(&amp;htim3));//获取定时器的值</span><br></pre></td></tr></table></figure></p>
+<p>即可获取当前编码器的值。<br>如果使用中断方式，则编码器每给一个信号，STM32就会进入编码器定时器中断，可在该中断中控制电机，使控制更加精确，灵敏。中断函数为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)</span><br><span class="line">&#123;</span><br><span class="line">	if(htim -&gt;Instance == htim3.Instance)</span><br><span class="line">	&#123;</span><br><span class="line">		encoder_cnt = (uint32_t)(__HAL_TIM_GET_COUNTER(&amp;htim3));</span><br><span class="line">		···</span><br><span class="line">	&#125;</span><br><span class="line">	···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在控制中我们还可以将Z相接入外部中断，对编码器做零位处理，使得获取到的编码器值更加准确。</p>
 
       
-
     </div>
+    
+    
+    
+    
+      
+      <div style="text-align:center;color: #9E9E9E;font-size:14px;">---------------- 本文已结束 感谢您的阅读 ----------------</div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持交流分享，请我吃包辣条吧！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="lincnwang 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="lincnwang 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/STM32/" rel="tag"><i class="fa fa-tag"></i> STM32</a>
+          
+            <a href="/tags/编码器/" rel="tag"><i class="fa fa-tag"></i> 编码器</a>
+          
+            <a href="/tags/CubeMX/" rel="tag"><i class="fa fa-tag"></i> CubeMX</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/25/中兴众星捧月算法大赛/" rel="next" title="中兴众星捧月算法大赛">
+                <i class="fa fa-chevron-left"></i> 中兴众星捧月算法大赛
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -740,6 +628,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1036,6 +933,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

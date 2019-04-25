@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[博客恢复]]></title>
+    <url>%2F2019%2F04%2F25%2F%E5%8D%9A%E5%AE%A2%E6%81%A2%E5%A4%8D%2F</url>
+    <content type="text"><![CDATA[我们使用github搭建个人博客后，如果长期未使用，则github会收回github pages，无论我们怎么从新配置域名都无法访问http://username.github.io。 我的方法是删除项目代码库repositories，重新新建项目代码库username.github.io，然后你就可以惊喜的发现可以通过外网直接访问到http://username.github.io了。接下来就是配置SSH密钥，在GitHub账户中添加你的公钥，配置git的个人信息，再做域名映射（这些操作网上百度一大堆，我这里就不做赘述）。 完成以上操作后，将个人本地仓库中的文件通过 12hexo ghexo d 生成静态文件并部署到个人新建的代码库中，你就可以发现个人博客已经能够恢复访问了，跟之前的一模一样，当然这个操作必须是你的本地仓库保存完整的情况下。如果本地仓库已经丢失，那么可以通过之前上传到github上的代码库下载到本地，再进行恢复操作。]]></content>
+      <categories>
+        <category>hexo+github 博客恢复</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[delete blog]]></title>
     <url>%2F2018%2F02%2F08%2Fdelete-blog%2F</url>
     <content type="text"><![CDATA[删除仓库里面 source/_posts/要删除的博文.md 执行下面命令更新博客123hexo g == hexo generate#生成hexo s == hexo server #启动服务预览hexo d == hexo deploy#部署 注意，不能全部删除_post文件夹下的博文，不然会报错。]]></content>

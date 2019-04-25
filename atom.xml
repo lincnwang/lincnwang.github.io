@@ -86,9 +86,9 @@
       <category term="hardware" scheme="http://yoursite.com/categories/hardware/"/>
     
     
-      <category term="Altiumdesigner" scheme="http://yoursite.com/tags/Altiumdesigner/"/>
-    
       <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+      <category term="Altiumdesigner" scheme="http://yoursite.com/tags/Altiumdesigner/"/>
     
   </entry>
   
@@ -162,9 +162,9 @@
       <category term="GUI设计" scheme="http://yoursite.com/categories/GUI%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   

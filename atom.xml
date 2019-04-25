@@ -47,7 +47,7 @@
     <link href="http://yoursite.com/2018/02/06/Altiumdesigner-shortcuts/"/>
     <id>http://yoursite.com/2018/02/06/Altiumdesigner-shortcuts/</id>
     <published>2018-02-06T13:00:48.000Z</published>
-    <updated>2018-02-06T13:08:51.343Z</updated>
+    <updated>2018-02-06T13:08:51.344Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一、通用设置"><a href="#一、通用设置" class="headerlink" title="一、通用设置"></a>一、通用设置</h1><p>1：Alt+F5 全屏获返回全屏。<br>2：按住鼠标滚轮 鼠标上下滑动 放大缩小，按住Ctrl 按住鼠标右键 鼠标上下滑动也放大缩小。<br>3：T/C  交叉探针  看到寻找原理图和PCB的元件位置。<br>4：按住鼠标右键移动鼠标实现图纸的拖动。<br>5：Ctrl+O 打开Choose Document to Open(选择文档)对话框。<br>6：Ctrl+F4 关闭当前文档。<br>7：Ctrl+S 保存当前文档。<br>8：Alt+F4或者W/T 关闭Altium Designer，W/H水平平铺，W/V垂直平铺。<br>9：Shift+F4 平铺已打开的文档。<br>10：Shift+F5 在活动面板和工作区间切换。<br>11：C/C 编译当前的工程。<br>12：C/R 重新编译当前工程。<br>13：End 刷新屏幕。<br>14：Home 定位中心到光标同时刷新屏幕。<br>15：Ctrl+PgDn 调整视图以适合所有对象。<br>16：Ctrl+Z 撤销。<br>17：Ctrl+Y 重新执行。<br>18：BackSpace 在放置导线、总线、直线或多边形时移除最后一个顶点。<br>19：CTRL+SHIFT+ T  、B、L、R、H、V、D可以快速对齐所选中的元件 上 下 左 右 水平 垂直 栅格。<br>20：Shift+C 清除高亮</p><h1 id="二、原理图"><a href="#二、原理图" class="headerlink" title="二、原理图"></a>二、原理图</h1><p>1：按住shift  拖动某个元件，可快速复制。<br>2：Alt+左击 在图纸中高亮所有在网络的元素。<br>4：按住Ctrl 拖动某个元件，可以移动位置，并且保持原来的线连接（在18版中，无需按住Ctrl，直接拖拽即可）。<br>5：Ctrl+H 搜索和替换文本。<br>6：Ctrl+F 查找文本。<br>7：F3 搜索下一个。<br>8：E/M/D或者按住Ctrl 鼠标点击器件完成器件的拖动（和器件连接的线也会跟着移动）。<br>9：Insert 放置相同类型对象的时候复制对象的属性。<br>10：P/W 画线。<br>11：P/T 添加text。<br>12：Shift+拖拽 复制元器件。</p><h1 id="三、PCB"><a href="#三、PCB" class="headerlink" title="三、PCB"></a>三、PCB</h1><p>1：E/S/Y 选中该层全部线条。<br>2：D/S/D 按选择对象重新定义板子形状。<br>3：Shift+鼠标点击 实现多选。<br>4：Shift+S 键 切换单层显示。<br>5：Q  英寸和毫米 尺寸切换。<br>6：D+R 进入布线规则设置。<br>7：Ctrl+鼠标单击某个线，整个线的NET 网络 呈现高亮状态。<br>8：Ctrl+H+鼠标单击某个线，整个线的NET网络被选中。<br>9：小键盘上的 * （星号键）可以在top、bottom layer切换达到快速切换上下层。另外 +  - 可以把所有显示的层轮流切换。<br>10：U+选NET 点布线删除NET之间的布线<br>11：M+I  可以把选中所有的元件，翻转过来。这样可以在上下层切换，方便布线，调整印丝层。<br>12：鼠标点击器件选中，左键按住不放+L可以快速将该器件翻转到另一层。<br>13：器件联合，选中两个器件，然后右击 选择 联合（unions）-从选中的器件生成联合（Create Union from selected objects）这样可以操作两个位置在一起的器件，当要去掉时候  选中器件 右击  联合-从联合打散器件    那么连接在一起的就能够单独操作了。当选中联合的器件，右击选择联合，有个 选择所有的联合 这样一下子选择所有联合的器件。固定的外框就可以联合起来移动操作。<br>14：多根线同时画的时候，每个先画个短的线，按SHIFT 选中所有一起画的线，选好，松开SHIFT，鼠标移动到线头 白点处，然后拖动，那么所有线就一起拖动。 转弯一次，松开， 在拖，又可以转弯。<br>15:  E/D 删线<br>16:  Shift+E 捕捉焊盘开关<br>17：Ctrl+M或者R/M 测量任意两点之间的距离<br>18：L或者O/M 打开图层显示控制界面<br>19：P+G 快速打开敷铜设置<br>20：画线时Ctrl+Shift+Space 在5种线形之间切换<br>21：Shift+B 建立查询<br>22：Ctrl 走线时按下来暂时禁用电气栅格<br>23：T/E 添加或删除泪滴<br>24：P/P 放置焊盘<br>25：P/V 放置过孔<br>26：P/T 画线<br>27：P/D/L 测量尺寸<br>28：Shift+A 调用蛇形走线，再按 1和2改变转角，按 3和4改变间距，按，和。改变宽窄<br>29：Space空格键 在交互布线的过程中，切换布线方向。这很常用。<br>30：主键盘上的1 在交互布线的过程中，切换布线方法（设定每次单击鼠标布1段线还是2段线）。<br>31：主键盘上的2 在交互布线的过程中，添加一个过孔，但不换层。<br>32：J/L 定位到指定的坐标的位置。这时要注意确认左下角的坐标值，如果定位不准，可以放大视图并重新定位，如果还是不准，则需要修改栅格吸附尺寸。（定位坐标应该为吸附尺寸的整数倍）。<br>33：J/C 定位到指定的元件处。在弹出的对话框内输入该元件的编号。<br>34：画线时按住Ctrl+Shift然后滑动滚轮可切换层画线并自动添加过孔。<br>35：Shift+F 查找相似对象。<br>36：R/I/E 生成元件清单。<br>37：T/O 选择打散器件方式。</p><h1 id="四、其他"><a href="#四、其他" class="headerlink" title="四、其他"></a>四、其他</h1><p>InPolygon 设置敷铜和走线、过孔、焊盘之间的间距<br>InNet（‘’）指定网络<br>IsVia 过孔<br>IsPad 焊盘</p>]]></content>
     
@@ -60,9 +60,9 @@
       <category term="hardware" scheme="http://yoursite.com/categories/hardware/"/>
     
     
-      <category term="Altiumdesigner" scheme="http://yoursite.com/tags/Altiumdesigner/"/>
-    
       <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+      <category term="Altiumdesigner" scheme="http://yoursite.com/tags/Altiumdesigner/"/>
     
   </entry>
   
@@ -71,7 +71,7 @@
     <link href="http://yoursite.com/2018/01/31/pyinstall%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2018/01/31/pyinstall的使用/</id>
     <published>2018-01-31T09:30:57.000Z</published>
-    <updated>2018-01-31T14:35:22.382Z</updated>
+    <updated>2018-01-31T14:35:22.383Z</updated>
     
     <content type="html"><![CDATA[<p>在python文件目录下命令行输入（若文件为test.py）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -F test.py        //参数-F 表示生成单个exe文件</span><br></pre></td></tr></table></figure></p><p>执行后在该目录下会生成一个dist目录，test.exe文件存放在dist目录下。</p><p>如果运行的是GUI类型的程序，你不想弹出命令窗口，可以采用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -F -w test.py</span><br></pre></td></tr></table></figure></p><p>打包exe时，定制程序图标可以使用以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -F -w -i lincn.ico test.py</span><br></pre></td></tr></table></figure></p><p>其中lincn.ico为你希望定制的程序图标。</p><p>当你的py文件引入了多个py，进行程序打包时，将引入的py名称放在主py文件之后即可。</p><p>其他pyinstaller指令如图：<br><img src="/2018/01/31/pyinstall的使用/pyinstaller.png" alt=""></p>]]></content>
     
@@ -136,9 +136,9 @@
       <category term="GUI设计" scheme="http://yoursite.com/categories/GUI%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -147,7 +147,7 @@
     <link href="http://yoursite.com/2017/12/13/postLincnwang-%E4%BD%A0%E5%A5%BD/"/>
     <id>http://yoursite.com/2017/12/13/postLincnwang-你好/</id>
     <published>2017-12-13T08:15:33.000Z</published>
-    <updated>2017-12-15T04:43:01.298Z</updated>
+    <updated>2017-12-15T04:43:01.299Z</updated>
     
     <content type="html"><![CDATA[<p>摘要: 介绍了带通采样定理，它在数据采集中可以降低采样率，但是在实际采集中存在信号混叠，采样“盲区”和频谱反转等问题，对这些问题提出了解决方法。在这个理论基础上，设计了高速数据采集系统的硬件电路，介绍了数据采集ADC 芯片 AD08D1000，以及该芯片的外围差分信号转换电路和时钟信号产生电路，同时还介绍了电源模块电路和用于数据传输的 USB 模块电路。<br><a id="more"></a><br>关键词: 带通采样; 数据采集; ADC08D1000</p><h2 id="Hardware-Circuit-Design-of-High-speed-Data-Acquisition-System-Based-on-Band-pass-Sampling-Theorem"><a href="#Hardware-Circuit-Design-of-High-speed-Data-Acquisition-System-Based-on-Band-pass-Sampling-Theorem" class="headerlink" title="Hardware Circuit Design of High-speed Data Acquisition System Based on Band-pass Sampling Theorem"></a>Hardware Circuit Design of High-speed Data Acquisition System Based on Band-pass Sampling Theorem</h2><p>Abstract: This paper introduced the band-pass sampling theorem. The sampling rate in data collection can be greatly reduced by this theorem. However, problems of signals aliasing, sampling blind area and spectrum reversal were appeared in actual data collection. The paper proposed the solution methods of these problems. Then the hardware circuit of the high-speed data acquisition system was designed based on the theoretical basis. The data acquisition ADC chip AD08D1000, the peripheral difference signal circuit of the chip and the clock signal circuit were introduced. Besides, the power module circuit and the USB module circuit used for data transmission were introduced.<br>Key words: band-pass sampling; data acquisition; ADC08D1000</p><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>数据采集是获得信息的一种基本手段。随着信息科学技术的迅速发展，它已经成为信息领域中不可缺少的部分。随着科技的不断进步，人们对数据采集系统的要求也越来越高，不仅要求采样的精度高，数据转换速度快，还要求具有抗干扰能力。高速数据采集系统主要包括几个部分:前端调理电路，高速ADC，时钟电路，微处理器以及电源等组成。文中提出一种以NiosⅡ为核心控制器，基于带通采样的高速数据采集系统，并设计了系统中各个部分的硬件电路。</p><h2 id="1-带通采样"><a href="#1-带通采样" class="headerlink" title="1 带通采样"></a>1 带通采样</h2><p>根据奈奎斯特采样定理，对于频带为(0，fh)的信号，要想采样后能够不失真的还原出原信号，则抽样频率必须大于2倍信号的最高频率，即fs≥2fh．但是实际中多数信号是频率很高的信号，对于频率为(fL，fH)的高频率信号，如果用fs≥2fh的采样频率进行采样，现在的ADC器件根本无法实现，且后续的数字信号处理器也无法处理高频率信号。这个时候我们可以通过在软件无线电中应用十分广泛的带通采样定理来采样。</p><h3 id="1．1-带通采样定理理论"><a href="#1．1-带通采样定理理论" class="headerlink" title="1．1 带通采样定理理论"></a>1．1 带通采样定理理论</h3><p>带通采样定理:频带为(fL，fH)的带通信号，带宽B=fH－fL．如果其采样速率满足:<br>f_x=(2(f_L+f_H))/(2n+1)=〖4f〗_0/(2n+1)<br>式中f_0=(f_L+f_H)/2，其中n取能满足f_s=2(f_H-f_L)的整数，那么用fs进行等间隔采样得到的信号能准确的确定原信号。带通采样定理的结果把位于［nB，(n+1)B］(n=0，1，2，3……)不同频带上的信号都用位于(0，B)频带的信号来表示。所以带通采样定理所使用的前提条件是:只允许1个频带上存在信号，不允许其他不相同的频带上同时存在信号。如果其他不相同的频带上存在信号，则会引起信号混叠。这样可以采用抗混叠滤波器来解决，即在采样前先进行滤波，得到想要的带通信号，再进行采样。</p><h3 id="1．2-带通采样中的“盲区”处理"><a href="#1．2-带通采样中的“盲区”处理" class="headerlink" title="1．2 带通采样中的“盲区”处理"></a>1．2 带通采样中的“盲区”处理</h3><p>当抗混叠滤波器是理想的情况下， 通过调节滤波器的中心频率，可以采用同一采样频率f_s=2(f_H-f_L)来对整个频段的信号进行采样，这样可以实现整个频段的无“盲区”采样。但是现实中理想的滤波器是不存在的，可实现的滤波器采样的直接过后就是存在采样“盲区”，当信号落在“盲区”时， 就会被滤波器滤掉，从而无法对信号进行采样并使其数字化。<br>解决这个采样盲区的办法是使用一个主采样频率配合多个“盲区”采样频率进行采样。根据式f_x=(2(f_L+f_H))/(2n+1)=〖4f〗_0/(2n+1)可知“盲区”采样频率:<br>f_sm=4/(2n+1) f_om<br>式中f_om为“盲区”采样中心频率，它与主采样频率f_s的关系为:<br>f_om=(m+1)/2 f_s<br>得:<br>f_sm=(2m+2)/(2n+1) f_s<br>式中m取不同整数对应的不同“盲区”，n的取值尽量使f_sm靠近f_s。</p><h3 id="1．3带通采样中的频谱反转"><a href="#1．3带通采样中的频谱反转" class="headerlink" title="1．3带通采样中的频谱反转"></a>1．3带通采样中的频谱反转</h3><p>带通采样的结果是把位于［nB，(n+1)B］(n=0，1，2，3……)不同频带上的信号都用位于(0，B)频带的信号来表示。当n为偶数时，采样后信号的频谱在零频位置得以还原。但是当n为基数时，采样后信号的频谱在零频位置却发生了翻转。就n=3来说明，频谱为(3B，4B)的信号在采样频谱如图1所示。经过采样频率fs=2B采样后信号的频谱如图2所示，可以看出采样后信号频谱在零频位置(－B，B)上发生了反转，而在(－2B，0)和(0，2B)上信号频谱没有发生反转。在这段频率上信号x(t)的频域表达式为X(w±2πB)，将其进行时域变换得到:<br>X(w±2πB)→e^(±j2πBt) x(t)＝e^(±jπf_s t) x(t)<br>进行离散变换，得到数字化序列为:<br>e^(±jπn) x(n)=(-1)^n x(n)<br>从式中看出，只要将数字化序列进行隔位符号取反，就可以解决n为基数时的频谱反转问题。</p>]]></content>
     
@@ -168,8 +168,8 @@
     <title>Hello</title>
     <link href="http://yoursite.com/2017/12/13/hello-world/"/>
     <id>http://yoursite.com/2017/12/13/hello-world/</id>
-    <published>2017-12-13T07:29:52.911Z</published>
-    <updated>2017-12-15T05:21:30.072Z</updated>
+    <published>2017-12-13T07:29:52.912Z</published>
+    <updated>2017-12-15T05:21:30.073Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://lincnwang.github.io/" target="_blank" rel="noopener">Lincnwang’s  blog</a>! This is my very first post. If you have any problems when read my article, please feel free to leave a message or contact with me, I wish make friend with you. And share something with you!</p><h2 id="HardWare"><a href="#HardWare" class="headerlink" title="HardWare"></a>HardWare</h2><h2 id="SoftWare"><a href="#SoftWare" class="headerlink" title="SoftWare"></a>SoftWare</h2>]]></content>
     

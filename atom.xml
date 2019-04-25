@@ -112,9 +112,9 @@
       <category term="hardware" scheme="http://yoursite.com/categories/hardware/"/>
     
     
-      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
-    
       <category term="Altiumdesigner" scheme="http://yoursite.com/tags/Altiumdesigner/"/>
+    
+      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
     
   </entry>
   

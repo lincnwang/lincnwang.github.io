@@ -141,7 +141,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/4.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/6.png">
-<meta property="og:updated_time" content="2019-04-26T03:16:09.088Z">
+<meta property="og:updated_time" content="2019-04-26T09:19:15.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="STM32CubeMX的编码器接口">
 <meta name="twitter:description" content="使用STM32CubeMX配置STM32的编码器接口，可直接通过读寄存器获取编码器值。">
@@ -500,7 +500,7 @@
 
       
         <p>编码器是将位移或者角度转换为电信号的仪器，按照读出方式编码器可以分为接触式和非接触式两种；按照工作原理可分为增量式和绝对式两种。增量式编码器是将位移转换成周期性的电信号，再把这个电信号转变为计数脉冲，用脉冲的个数表示位移的大小。绝对式编码器的每一个位置对应一个确定的数字码，因此它的示值只与测量的起始和终止位置有关，而与测量的中间过程无关。<br>由于绝对式编码器是直接去读位置，所以其位置信息是通过通讯的方式进行读取，相对增量式编码器使用更加简单（通常价格也更加昂贵，且通常情况下量程较短，类似于光栅尺的低阶版）。所以在使用中我们更多的关注点在如何精确读取增量式编码器的值。<br>首先我们应该知道，一般增量式编码器的输出有集电极开路输出，推拉输出以及线驱动输出。输出信号类型目前一般都是正交信号AB相输出加上参考零位信号Z相输出的方式。当然也有更少的只有A相或者AB相输出和更多的A，A-，B，B-，Z，Z-输出。A，A-为互补的一组信号。其中A、B为相差90°的脉冲，Z相信号在编码器旋转一周发出一个脉冲信号，通常用作参考零位。通常我们通过判定AB相信号的前后位置来判定编码器正转和反转。</p>
-<p><img src="/2019/04/25/STM32CubeMX的编码器接口/1.png" alt="测试图片"></p>
+<p><img src="/2019/04/25/STM32CubeMX的编码器接口/1.png" alt="编码器接口"></p>
 <p>了解了增量式编码器的工作原理，接下来我们看看应该如何是该它。STM32给我们预留了该增量式编码器的硬件接口。通过STM32CubeMX对gpio进行配置后，将增量式编码器的AB两相信号接到STM32的对应IO口上，当编码器工作时，STM32会硬件记录编码器的信号值，此时编码器正转或者反转，STM32会自己进行硬件加减运算，使用方便且精度高，记录也很精确。</p>
 <p><img src="/2019/04/25/STM32CubeMX的编码器接口/2.png" alt="测试图片"></p>
 <p>这里我们使用的MCU是STM32F103RCT6，编码器为光洋电子的TRD-2T，两相+原点增量式旋转编码器</p>
@@ -537,7 +537,7 @@
   <p><span>本文标题:</span><a href="/2019/04/25/STM32CubeMX的编码器接口/">STM32CubeMX的编码器接口</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 lincnwang 的个人博客">lincnwang</a></p>
   <p><span>发布时间:</span>2019年04月25日 - 20:48</p>
-  <p><span>最后更新:</span>2019年04月26日 - 11:16</p>
+  <p><span>最后更新:</span>2019年04月26日 - 17:19</p>
   <p><span>原始链接:</span><a href="/2019/04/25/STM32CubeMX的编码器接口/" title="STM32CubeMX的编码器接口">http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/04/25/STM32CubeMX的编码器接口/"  aria-label="复制成功！"></i></span>
   </p>
@@ -625,6 +625,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/26/NB-IOT技术/" rel="prev" title="NB-IOT技术">
+                NB-IOT技术 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -727,7 +731,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -738,7 +742,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -749,7 +753,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

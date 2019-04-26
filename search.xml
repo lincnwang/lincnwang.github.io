@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[STM32CubeMX的编码器接口]]></title>
     <url>%2F2019%2F04%2F25%2FSTM32CubeMX%E7%9A%84%E7%BC%96%E7%A0%81%E5%99%A8%E6%8E%A5%E5%8F%A3%2F</url>
-    <content type="text"><![CDATA[编码器是将位移或者角度转换为电信号的仪器，按照读出方式编码器可以分为接触式和非接触式两种；按照工作原理可分为增量式和绝对式两种。增量式编码器是将位移转换成周期性的电信号，再把这个电信号转变为计数脉冲，用脉冲的个数表示位移的大小。绝对式编码器的每一个位置对应一个确定的数字码，因此它的示值只与测量的起始和终止位置有关，而与测量的中间过程无关。由于绝对式编码器是直接去读位置，所以其位置信息是通过通讯的方式进行读取，相对增量式编码器使用更加简单（通常价格也更加昂贵，且通常情况下量程较短，类似于光栅尺的低阶版）。所以在使用中我们更多的关注点在如何精确读取增量式编码器的值。首先我们应该知道，一般增量式编码器的输出有集电极开路输出，推拉输出以及线驱动输出。输出信号类型目前一般都是正交信号AB相输出加上参考零位信号Z相输出的方式。当然也有更少的只有A相或者AB相输出和更多的A，A-，B，B-，Z，Z-输出。A，A-为互补的一组信号。其中A、B为相差90°的脉冲，Z相信号在编码器旋转一周发出一个脉冲信号，通常用作参考零位。通常我们通过判定AB相信号的前后位置来判定编码器正转和反转。 了解了增量式编码器的工作原理，接下来我们看看应该如何是该它。STM32给我们预留了该增量式编码器的硬件接口。通过STM32CubeMX对gpio进行配置后，将增量式编码器的AB两相信号接到STM32的对应IO口上，当编码器工作时，STM32会硬件记录编码器的信号值，此时编码器正转或者反转，STM32会自己进行硬件加减运算，使用方便且精度高，记录也很精确。这里我们使用的MCU是STM32F103RCT6，编码器为光洋电子的TRD-2T，两相+原点增量式旋转编码器 STM32的编码器接口模式基本上相当于使用了一个带有方向选择的外部时钟这里我们使用TIM3。首先我们使用CubeMX配置PA6和PA7的功能为TIM3_CH1和TIM3_CH2,然后配置TIM3为编码器接口模式。 由于STM32的编码器接口计数方式为上升沿和下降沿都要计数，所以对于AB两相信号为方波来说其编码器的值为实际值的4倍，故PSC配置为4-1，其他的主要配置清单如图： 同时建议使用中断方式读取处理编码器，所以我们打开TIM3的全局中断： 以上就是CubeMX上对编码器接口的配置，接下来我们生成MDK-ARM工程，用keil打开，在main函数中使用以下函数对编码器寄存器值清零：1__HAL_TIM_SET_COUNTER(&amp;htim3,0); 然后打开定时器的encoder模式（查询或中断模式）：12HAL_TIM_Encoder_Start(&amp;htim3, TIM_CHANNEL_ALL); //打开定时器的encoder模式HAL_TIM_Encoder_Start_IT(&amp;htim3, TIM_CHANNEL_ALL); //打开定时器的encoder中断模式 如果使用查询模式，则直接使用：1encoder_cnt = (uint32_t)(__HAL_TIM_GET_COUNTER(&amp;htim3));//获取定时器的值 即可获取当前编码器的值。如果使用中断方式，则编码器每给一个信号，STM32就会进入编码器定时器中断，可在该中断中控制电机，使控制更加精确，灵敏。中断函数为：123456789void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)&#123; if(htim -&gt;Instance == htim3.Instance) &#123; encoder_cnt = (uint32_t)(__HAL_TIM_GET_COUNTER(&amp;htim3)); ··· &#125; ···&#125; 在控制中我们还可以将Z相接入外部中断，对编码器做零位处理，使得获取到的编码器值更加准确。]]></content>
+    <content type="text"><![CDATA[编码器是将位移或者角度转换为电信号的仪器，按照读出方式编码器可以分为接触式和非接触式两种；按照工作原理可分为增量式和绝对式两种。增量式编码器是将位移转换成周期性的电信号，再把这个电信号转变为计数脉冲，用脉冲的个数表示位移的大小。绝对式编码器的每一个位置对应一个确定的数字码，因此它的示值只与测量的起始和终止位置有关，而与测量的中间过程无关。由于绝对式编码器是直接去读位置，所以其位置信息是通过通讯的方式进行读取，相对增量式编码器使用更加简单（通常价格也更加昂贵，且通常情况下量程较短，类似于光栅尺的低阶版）。所以在使用中我们更多的关注点在如何精确读取增量式编码器的值。首先我们应该知道，一般增量式编码器的输出有集电极开路输出，推拉输出以及线驱动输出。输出信号类型目前一般都是正交信号AB相输出加上参考零位信号Z相输出的方式。当然也有更少的只有A相或者AB相输出和更多的A，A-，B，B-，Z，Z-输出。A，A-为互补的一组信号。其中A、B为相差90°的脉冲，Z相信号在编码器旋转一周发出一个脉冲信号，通常用作参考零位。通常我们通过判定AB相信号的前后位置来判定编码器正转和反转。 了解了增量式编码器的工作原理，接下来我们看看应该如何是该它。STM32给我们预留了该增量式编码器的硬件接口。通过STM32CubeMX对gpio进行配置后，将增量式编码器的AB两相信号接到STM32的对应IO口上，当编码器工作时，STM32会硬件记录编码器的信号值，此时编码器正转或者反转，STM32会自己进行硬件加减运算，使用方便且精度高，记录也很精确。 这里我们使用的MCU是STM32F103RCT6，编码器为光洋电子的TRD-2T，两相+原点增量式旋转编码器 STM32的编码器接口模式基本上相当于使用了一个带有方向选择的外部时钟这里我们使用TIM3。首先我们使用CubeMX配置PA6和PA7的功能为TIM3_CH1和TIM3_CH2,然后配置TIM3为编码器接口模式。 由于STM32的编码器接口计数方式为上升沿和下降沿都要计数，所以对于AB两相信号为方波来说其编码器的值为实际值的4倍，故PSC配置为4-1，其他的主要配置清单如图： 同时建议使用中断方式读取处理编码器，所以我们打开TIM3的全局中断： 以上就是CubeMX上对编码器接口的配置，接下来我们生成MDK-ARM工程，用keil打开，在main函数中使用以下函数对编码器寄存器值清零：1__HAL_TIM_SET_COUNTER(&amp;htim3,0); 然后打开定时器的encoder模式（查询或中断模式）：12HAL_TIM_Encoder_Start(&amp;htim3, TIM_CHANNEL_ALL); //打开定时器的encoder模式HAL_TIM_Encoder_Start_IT(&amp;htim3, TIM_CHANNEL_ALL); //打开定时器的encoder中断模式 如果使用查询模式，则直接使用：1encoder_cnt = (uint32_t)(__HAL_TIM_GET_COUNTER(&amp;htim3));//获取定时器的值 即可获取当前编码器的值。如果使用中断方式，则编码器每给一个信号，STM32就会进入编码器定时器中断，可在该中断中控制电机，使控制更加精确，灵敏。中断函数为：123456789void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)&#123; if(htim -&gt;Instance == htim3.Instance) &#123; encoder_cnt = (uint32_t)(__HAL_TIM_GET_COUNTER(&amp;htim3)); ··· &#125; ···&#125; 在控制中我们还可以将Z相接入外部中断，对编码器做零位处理，使得获取到的编码器值更加准确。]]></content>
       <categories>
         <category>hardware</category>
       </categories>
@@ -60,8 +60,8 @@
         <category>hardware</category>
       </categories>
       <tags>
-        <tag>Altiumdesigner</tag>
         <tag>tools</tag>
+        <tag>Altiumdesigner</tag>
       </tags>
   </entry>
   <entry>
@@ -96,8 +96,8 @@
         <category>GUI设计</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>software</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>

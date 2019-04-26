@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Never Too Late To Start</title>
+  <title>Lincnwang</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -8,11 +8,6 @@
   <link href="http://yoursite.com/"/>
   <updated>2019-04-26T02:07:03.649Z</updated>
   <id>http://yoursite.com/</id>
-  
-  <author>
-    <name>lincnwang</name>
-    
-  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
